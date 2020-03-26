@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UISwitch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qou-OF-1AM">
+                                <rect key="frame" x="68" y="580" width="51" height="31"/>
+                                <connections>
+                                    <action selector="stateDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="NJd-m1-UED"/>
+                                </connections>
+                            </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightOff" translatesAutoresizingMaskIntoConstraints="NO" id="h03-1u-9XJ">
+                                <rect key="frame" x="108" y="0.0" width="240" height="232"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Y8d-CS-igp"/>
+                                    <constraint firstAttribute="height" constant="232" id="npI-Ph-LrC"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barto" translatesAutoresizingMaskIntoConstraints="NO" id="Mjq-sZ-vZh">
+                                <rect key="frame" x="144" y="516" width="270" height="346"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="ZBX-pF-J3F"/>
+                                    <constraint firstAttribute="height" constant="346" id="twf-Rh-8KC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aep-PZ-zmr">
+                                <rect key="frame" x="70" y="533.5" width="47" height="38.5"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
+                                <color key="textColor" red="0.7117066062176165" green="0.57015392114690966" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="h03-1u-9XJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="4SP-pN-mxK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qou-OF-1AM" secondAttribute="bottom" constant="251" id="FF4-Pn-TN4"/>
+                            <constraint firstItem="h03-1u-9XJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KVx-Zj-pbr"/>
+                            <constraint firstItem="Mjq-sZ-vZh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="US4-Ay-jOD"/>
+                            <constraint firstItem="Qou-OF-1AM" firstAttribute="top" secondItem="Aep-PZ-zmr" secondAttribute="bottom" constant="8" id="bR6-eH-fhJ"/>
+                            <constraint firstItem="Mjq-sZ-vZh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cfp-TL-cMI"/>
+                            <constraint firstItem="Aep-PZ-zmr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="coU-1H-BG7"/>
+                            <constraint firstItem="Mjq-sZ-vZh" firstAttribute="leading" secondItem="Qou-OF-1AM" secondAttribute="trailing" constant="27" id="uNz-yo-qie"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lightBulbImage" destination="h03-1u-9XJ" id="lxC-2b-hmZ"/>
+                        <outlet property="lightSwitch" destination="Qou-OF-1AM" id="cwO-FY-Hl8"/>
+                        <outlet property="stateLabel" destination="Aep-PZ-zmr" id="CCe-xx-5po"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="barto" width="722" height="928"/>
+        <image name="lightOff" width="330" height="574"/>
+    </resources>
+</document>
